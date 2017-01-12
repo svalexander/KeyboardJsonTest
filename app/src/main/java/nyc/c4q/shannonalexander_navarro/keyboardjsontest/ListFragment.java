@@ -10,6 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.Key;
+
 /**
  * Created by shannonalexander-navarro on 1/11/17.
  */
@@ -18,6 +23,8 @@ public class ListFragment extends Fragment {
 
     RecyclerView keyListRV;
     LinearLayout fragLayout;
+    KeyboardListAdapter keyListAdapter;
+    List<Key> availableKeys = new ArrayList<>();
 
     @Nullable
     @Override
@@ -29,6 +36,8 @@ public class ListFragment extends Fragment {
         keyListRV = (RecyclerView) root.findViewById(R.id.key_rv);
         keyListRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
+        keyListAdapter = new KeyboardListAdapter(availableKeys);
+        keyListRV.setAdapter(keyListAdapter);
 
         return root;
     }
