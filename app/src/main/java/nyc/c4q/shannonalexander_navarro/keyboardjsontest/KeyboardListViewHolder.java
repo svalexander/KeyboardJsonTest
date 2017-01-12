@@ -1,5 +1,6 @@
 package nyc.c4q.shannonalexander_navarro.keyboardjsontest;
 
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
@@ -16,8 +17,14 @@ public class KeyboardListViewHolder extends RecyclerView.ViewHolder {
 
     public KeyboardListViewHolder(View itemView) {
         super(itemView);
+
+        availableKeyNameTV = (TextView) itemView.findViewById(R.id.available_key_name_tv);
     }
 
     public void bind(Key aKey) {
+        availableKeyNameTV.setText(aKey.getName());
+        availableKeyNameTV.setTextColor(Color.parseColor(aKey.getTextColor()));
+
+
     }
 }

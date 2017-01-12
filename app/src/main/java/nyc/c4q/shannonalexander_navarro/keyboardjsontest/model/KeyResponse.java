@@ -1,5 +1,7 @@
 package nyc.c4q.shannonalexander_navarro.keyboardjsontest.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +11,9 @@ import java.util.List;
 
 public class KeyResponse {
 
-    private boolean success;
-    private List<Key> availableKeys = new ArrayList<>();
+     boolean success;
+    @SerializedName("available keys")
+     List<Key> keys = new ArrayList<>();
 
     public boolean isSuccess() {
         return success;
@@ -20,11 +23,12 @@ public class KeyResponse {
         this.success = success;
     }
 
-    public List<Key> getAvailableKeys() {
-        return availableKeys;
+
+    public List<Key> getKeys() {
+        return keys;
     }
 
-    public void setAvailableKeys(List<Key> availableKeys) {
-        this.availableKeys = availableKeys;
+    public void setKeys(List<Key> keys) {
+        this.keys = keys;
     }
 }
