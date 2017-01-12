@@ -2,6 +2,7 @@ package nyc.c4q.shannonalexander_navarro.keyboardjsontest.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,9 +10,10 @@ import java.util.List;
  * Created by shannonalexander-navarro on 1/11/17.
  */
 
-public class KeyResponse {
+public class KeyResponse implements Serializable {
 
      boolean success;
+
     @SerializedName("available keys")
      List<Key> keys = new ArrayList<>();
 

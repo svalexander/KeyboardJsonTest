@@ -1,11 +1,14 @@
 package nyc.c4q.shannonalexander_navarro.keyboardjsontest.model;
 
 
+import java.io.Serializable;
+
 /**
  * Created by shannonalexander-navarro on 1/11/17.
  */
 
-public class Key {
+public class Key implements Serializable {
+
     private String name;
     private String textColor;
     private String url;

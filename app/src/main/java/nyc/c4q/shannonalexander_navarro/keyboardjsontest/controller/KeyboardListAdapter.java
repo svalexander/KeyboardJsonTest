@@ -1,4 +1,4 @@
-package nyc.c4q.shannonalexander_navarro.keyboardjsontest;
+package nyc.c4q.shannonalexander_navarro.keyboardjsontest.controller;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.views.KeyboardListViewHolder;
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.R;
 import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.Key;
 
 /**

@@ -1,4 +1,4 @@
-package nyc.c4q.shannonalexander_navarro.keyboardjsontest;
+package nyc.c4q.shannonalexander_navarro.keyboardjsontest.views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.R;
 import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.Key;
 
 /**
@@ -15,8 +16,9 @@ import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.Key;
 
 public class KeyboardListViewHolder extends RecyclerView.ViewHolder {
 
-     TextView availableKeyNameTV;
+    TextView availableKeyNameTV;
     private final Context context;
+    public static final String THIS_KEY = "this key";
 
     public KeyboardListViewHolder(View itemView) {
         super(itemView);
@@ -25,7 +27,7 @@ public class KeyboardListViewHolder extends RecyclerView.ViewHolder {
         availableKeyNameTV = (TextView) itemView.findViewById(R.id.available_key_name_tv);
     }
 
-    public void bind(Key aKey) {
+    public void bind(final Key aKey) {
         availableKeyNameTV.setText(aKey.getName());
         availableKeyNameTV.setTextColor(Color.parseColor(aKey.getTextColor()));
 
@@ -33,6 +35,7 @@ public class KeyboardListViewHolder extends RecyclerView.ViewHolder {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, KeyboardActivity.class);
+                intent.putExtra(THIS_KEY, aKey);
                 context.startActivity(intent);
             }
         });

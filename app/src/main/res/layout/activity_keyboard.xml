@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/second_act_layout"
     android:fitsSystemWindows="true"
-    tools:context="nyc.c4q.shannonalexander_navarro.keyboardjsontest.KeyboardActivity">
+    tools:context="nyc.c4q.shannonalexander_navarro.keyboardjsontest.views.KeyboardActivity">
 
     <ImageView
         android:id="@+id/key_image"

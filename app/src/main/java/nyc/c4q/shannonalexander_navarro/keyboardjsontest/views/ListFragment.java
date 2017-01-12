@@ -1,4 +1,4 @@
-package nyc.c4q.shannonalexander_navarro.keyboardjsontest;
+package nyc.c4q.shannonalexander_navarro.keyboardjsontest.views;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,9 +15,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.R;
 import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.Key;
 import nyc.c4q.shannonalexander_navarro.keyboardjsontest.model.KeyResponse;
 import nyc.c4q.shannonalexander_navarro.keyboardjsontest.service.KeyService;
+import nyc.c4q.shannonalexander_navarro.keyboardjsontest.controller.KeyboardListAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -47,13 +49,6 @@ public class ListFragment extends Fragment {
         keyListRV = (RecyclerView) root.findViewById(R.id.key_rv);
         keyListRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
-//        availableKeyNameTV.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getContext(), KeyboardActivity.class);
-//                startActivity(intent);
-//            }
-//        });
         return root;
     }
 
