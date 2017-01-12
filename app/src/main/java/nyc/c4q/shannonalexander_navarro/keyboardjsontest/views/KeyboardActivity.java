@@ -54,7 +54,7 @@ public class KeyboardActivity extends AppCompatActivity {
 
     public void initViews() {
         layout = (LinearLayout) findViewById(R.id.second_act_layout);
-        keyIV = (ImageView) findViewById(R.id.key_image);
+        keyIV = (ImageView) findViewById(R.id.key_image_IV);
 
     }
 }
