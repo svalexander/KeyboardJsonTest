@@ -47,6 +47,13 @@ public class ListFragment extends Fragment {
         keyListRV = (RecyclerView) root.findViewById(R.id.key_rv);
         keyListRV.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
+//        availableKeyNameTV.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getContext(), KeyboardActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         return root;
     }
 
